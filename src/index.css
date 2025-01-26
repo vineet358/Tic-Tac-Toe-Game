@@ -1,0 +1,61 @@
+/* General reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and root centering */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Light background for contrast */
+}
+
+/* Container to hold the grid */
+.tic-tac-toe-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+  gap: 5px; /* Space between the squares */
+  width: 90vmin; /* Use viewport size for responsiveness */
+  height: 90vmin; /* Use viewport size for responsiveness */
+  max-width: 450px; /* Maximum width to prevent it from getting too large */
+  max-height: 450px; /* Maximum height */
+  border: 2px solid #333; /* Border around the whole board */
+  padding: 10px;
+}
+
+/* Styling for each square */
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  border: 2px solid #333;
+  font-size: 3rem; /* Adjusted size for visibility */
+  height: 100%; /* Takes up full height of grid cell */
+  width: 100%; /* Takes up full width of grid cell */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+/* Hover effect for square */
+.square:hover {
+  background-color: #eaeaea;
+}
+
+/* Optional: Styling for X and O */
+.square.x {
+  color: red;
+}
+
+.square.o {
+  color: blue;
+}
